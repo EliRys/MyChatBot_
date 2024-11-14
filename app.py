@@ -14,7 +14,7 @@ def configurar_modelo(cliente, modelo, mensajeDeEntrada):
     return cliente.chat.completions.create(
         model = modelo,
         messages = [{"role":"user", "content":mensajeDeEntrada}],
-        stream = False #es importante cambiarlo a False al cerrar el host 
+        stream = True #es importante cambiarlo a False al cerrar el host 
     )
         
 #historial de mensajes
@@ -90,9 +90,8 @@ def main():
                 st.rerun() #va actualizando la pag
                 print(mensaje)
 
-if __name__ == "__main()__":
-    main()
+if __name__ == "__main__":
 
-main()
+    main()
 
 
